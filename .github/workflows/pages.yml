@@ -1,0 +1,42 @@
+name: Deploy Book
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+    paths:
+      - "src/**"
+      - "book.toml"
+
+jobs:
+  deploy:
+    name: "Deploy to Pages"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: Setup Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          override: true
+          toolchain: stable
+
+      - name: Cache cargo & target directories
+        uses: Swatinem/rust-cache@v2
+
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Install mdbook
+        run: cargo install mdbook
+
+      - name: Build Static Content
+        run: mdbook build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
+          cname: docs.mc.zekro.de

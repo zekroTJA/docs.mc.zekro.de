@@ -190,6 +190,10 @@
 🔗 <a href="https://mc.zekro.de">mc.zekro.de</a></p>
 </li>
 <li>
+<p><strong>Grafana Dashboard</strong><br />
+🔗 <a href="https://grafana.mc.zekro.de/public-dashboards/8a9913ab629d4761b6238d0ebdf74a0a?from=now-1h&amp;to=now&amp;timezone=browser">grafana.mc.zekro.de</a></p>
+</li>
+<li>
 <p><strong>Backup-Archiv &amp; World Download</strong><br />
 🔗 <a href="https://files.zekro.de/s3/minecraft-saves/">files.zekro.de/s3/minecraft-saves</a></p>
 </li>
@@ -199,6 +203,10 @@
 📖 <a href="/plotty.html">Docs</a></p>
 </li>
 </ul>
+<h2 id="world-map"><a class="header" href="#world-map"><a href="https://mc.zekro.de">World Map</a></a></h2>
+<iframe src="https://mc.zekro.de" width="100%" height="400em" frameborder="0"></iframe>
+<h2 id="stats"><a class="header" href="#stats"><a href="https://grafana.mc.zekro.de/public-dashboards/8a9913ab629d4761b6238d0ebdf74a0a?from=now-1h&amp;to=now&amp;timezone=browser">Stats</a></a></h2>
+<iframe src="https://grafana.mc.zekro.de/public-dashboards/8a9913ab629d4761b6238d0ebdf74a0a?from=now-1h&to=now&timezone=browser" width="100%" height="400em" frameborder="0"></iframe>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="regeln"><a class="header" href="#regeln">Regeln</a></h1>
 <ol>
 <li>
@@ -327,7 +335,48 @@
 <div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Optional</th><th>Beschreibung</th><th>Beispiel</th></tr></thead><tbody>
 <tr><td><code>plotname</code></td><td>Nein</td><td>Der name des zu löschenden Plots.</td><td><code>zekrotja_plot_1</code></td></tr>
 </tbody></table>
-</div>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="plugins"><a class="header" href="#plugins">Plugins</a></h1>
+<p>Auf dem Server laufen verschiedene Plugins. In dieser Section findet ihr alle Informationen zu den jeweiligen relevanten Plugins.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pl3xmap"><a class="header" href="#pl3xmap">Pl3xMap</a></h1>
+<p><a href="https://modrinth.com/plugin/pl3xmap">Pl3xMap</a> ist eine minimalistische online World Map für den Server, welche unter <a href="https://mc.zekro.de">mc.zekro.de</a> eingesehen werden kann. Hier kann man sich alle Welten des Servers von oben anschauen, kann sehen welche Spieler gerade online sind und wo sich diese Spieler gerade befinden.</p>
+<iframe src="https://mc.zekro.de" width="100%" height="400em" frameborder="0"></iframe>
+<h2 id="commands-1"><a class="header" href="#commands-1">Commands</a></h2>
+<h3 id="pl3xmap-hide"><a class="header" href="#pl3xmap-hide"><code>/pl3xmap hide</code></a></h3>
+<p>Versteckt die aktuelle Position und den Online-Status des Spielers auf der Map.</p>
+<h3 id="pl3xmap-show"><a class="header" href="#pl3xmap-show"><code>/pl3xmap show</code></a></h3>
+<p>Zeigt die Position und den Online-Status des Spielers auf der Map wieder an.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="worldguard"><a class="header" href="#worldguard">WorldGuard</a></h1>
+<p>Auf dem Server übernimmt <a href="https://modrinth.com/plugin/worldguard">WorldGuard</a> das managen und beschützen von Regionen.</p>
+<p>Das erstellen von Regionen und das Managen von Members sollte generell über den Discord Bot Plotty geschehen. <a href="plugins//plotty.html">Hier</a> findest du eine Anleitung, wie man den Bot benutzt.</p>
+<h2 id="commands-2"><a class="header" href="#commands-2">Commands</a></h2>
+<h3 id="rg-info"><a class="header" href="#rg-info"><code>/rg info</code></a></h3>
+<p>Gibt eine interaktive Chat-Nachricht mit Informationen über das Grundstück, in dem man sich gerade befindet. Mit einem Klick auf <code>[Flags]</code> kann man verschiedene Flags auf seinem eigenen Grundstück setzen, wie z.B. <code>creeper-explosion</code>, welches das Explodieren von Creepern verhindert.</p>
+<p><img src="plugins//assets/wg-rg-info.png" alt="" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="imageframe"><a class="header" href="#imageframe">ImageFrame</a></h1>
+<p><a href="https://modrinth.com/plugin/imageframe">ImageFrame</a> ist ein Plugin, welches es einem erlaubt eigene Bilder von einer URL in einer Map auf dem Server zu platzieren.</p>
+<p><img src="plugins//assets/imageframe-example.png" alt="" /></p>
+<p>Folgendes Video-Tutorial zeigt sehr gut, wie man das Plugin benutzt:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/N0PnFbWPD1A?si=CozY2H5EJR1kJu9h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<h2 id="commands-3"><a class="header" href="#commands-3">Commands</a></h2>
+<h3 id="imageframe-create-name-url-width-height-mode"><a class="header" href="#imageframe-create-name-url-width-height-mode"><code>/imageframe create &lt;name&gt; &lt;url&gt; &lt;width&gt; &lt;height&gt; &lt;mode&gt;</code></a></h3>
+<p>Erstellt eine Image-Map von der angegebenen URL mit der angegebenen Höhe (<code>&lt;height&gt;</code>) und Breite (<code>&lt;width&gt;</code>) <strong>in Item-Frames</strong>. Als Mode sollte man bei mehreren Frames am besten <code>combined</code> nutzen, dam an so alle Frames in einer Karte vereinen kann und nicht alle einzeln platzieren muss.</p>
+<p>Das Bild unter der angegebenen URL wird am Ende unter dem angegebenen Namen (<code>&lt;name&gt;</code>) gespeichert und kann mit dem Command <code>/imageframe get</code> erneut geholt werden.</p>
+<blockquote>
+<p>⚠️ <strong>Achtung</strong>: Man muss die benötigte anzahl an Karten im Inventar haben, bevor man den Command ausführt.</p>
+</blockquote>
+<blockquote>
+<p>💡 <strong>Tipp</strong>: Wenn man ein Bild von seinem PC nutzen möchte, so ladet das Bild einfach in Discord hoch, öffnet das Bild im Browser und kopiert die URL des Bildes aus der URL-Zeile des Browsers.</p>
+</blockquote>
+<h3 id="imageframe-get-name-mode"><a class="header" href="#imageframe-get-name-mode"><code>/imageframe get &lt;name&gt; &lt;mode&gt;</code></a></h3>
+<p>Gibt einem ein vorher hochgeladenes Bild als Map anhand des angegebenen Namens.</p>
+<h3 id="imageframe-list"><a class="header" href="#imageframe-list"><code>/imageframe list</code></a></h3>
+<p>Listet alle hochgeladenen Bilder auf.</p>
+<h3 id="imageframe-delete-name"><a class="header" href="#imageframe-delete-name"><code>/imageframe delete &lt;name&gt;</code></a></h3>
+<p>Löst ein hochgeladenes Bild anhand des angegebenen Namens.</p>
+<blockquote>
+<p>⚠️ <strong>Achtung</strong>: Dies löscht auch das Bild als Datei auf dem Server, womit alle Frames, die dieses Bild haben kaputtgehen!</p>
+</blockquote>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">

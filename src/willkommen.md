@@ -1,6 +1,6 @@
 # Willkommen
 
-Hey! 👋 Hier findest du eine Kolektion an Infos und Dokumentationen zu unserem kleinen Minecraft-Server!
+Hey! 👋 Hier findest du eine Kollektion an Infos und Dokumentationen zu unserem kleinen Minecraft-Server!
 
 ## Essentials
 

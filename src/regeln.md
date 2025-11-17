@@ -11,7 +11,9 @@
    - Inventory Sorting Mods
    - Generelle QoL-Mods wie AppleSkin, Shulker Box Tooltip, usw.
 
-1. Das Ausnutzen von Glitches innerhalb des Base-Games ist grundsätzlich gestattet. Sollten Lücken oder Bugs innerhalb von Plugins, der Serverkonfiguration oder den Permissions auftreten, meldet dies bitte umgehend einem/r [Admin](/staff.md).
+1. Das Ausnutzen von Glitches innerhalb des Base-Games ist grundsätzlich gestattet. Nur das Duping von Items ist verboten. Sollten Lücken oder Bugs innerhalb von Plugins, der Serverkonfiguration oder den Permissions auftreten, meldet dies bitte umgehend einem/r [Admin](/staff.md).
+
+1. Verfassungs- und Menschenfeindliche als auch NSFW-Inhalte sind in jeglicher Form verboten.
 
 1. Die Whitelist und das Erstellen von Plots werden grundsätzlich über den [Discord-Bot](/plotty.md) geregelt. In Absprache mit einem/r [Admin](/staff.md) können Ausnahmen gemacht werden.
 

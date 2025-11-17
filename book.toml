@@ -3,3 +3,11 @@ authors = ["zekroTJA"]
 language = "de"
 src = "src"
 title = "mc.zekro.de Docs"
+
+[preprocessor.last-changed]
+command = "mdbook-last-changed"
+renderer = ["html"]
+
+[output.html]
+git-repository-url = "https://github.com/zekroTJA/docs.mc.zekro.de"
+additional-css = ["css/last-changed.css"]

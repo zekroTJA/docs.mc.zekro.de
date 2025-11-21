@@ -17,4 +17,6 @@
 
 1. Die Whitelist und das Erstellen von Plots werden grundsätzlich über den [Discord-Bot](/plotty.md) geregelt. In Absprache mit einem/r [Admin](/staff.md) können Ausnahmen gemacht werden.
 
+1. Das **absichtliche** Verursachen von Performance-Problemen, welches zu "Lags" (TPS < 20) führt, ist verboten. Sollten dies unbeabsichtigt auftreten, z.B. durch Farmen, dann wird das Problem entweder von dem/r Verursacher\*in oder von einem/r Admin behoben, um ein reibungsloses Erlebnis für alle Spieler\*innen zu gewährleisten.
+
 1. Alle hier genannten Regeln können jederzeit angepasst werden. Bei Regelverstößen können [Admins](/staff.md) nach eigenem Ermessen sofortige Maßnahmen ergreifen – inklusive eines direkten Banns. Dies gilt insbesondere, wenn das Verhalten vorsätzlich, rücksichtslos oder wiederholt auftritt.

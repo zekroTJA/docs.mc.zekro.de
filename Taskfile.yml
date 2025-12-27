@@ -1,0 +1,31 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+
+  test:
+    cmd: echo foo
+
+  install-mdbook:
+    status:
+      - ! command -v mdbook
+      - ! command -v mdbook-last-changed
+      - ! command -v mdbook-mermaid
+    preconditions:
+      - sh: command -v cargo
+        msg: The Rust toolchain (cargo) needs to be installed to install mdbook
+    cmds:
+      - cargo install mdbook
+      - cargo install mdbook-last-changed
+      - cargo install mdbook-mermaid
+
+  serve:
+    deps:
+      - install-mdbook
+    cmds:
+      - mdbook serve -o

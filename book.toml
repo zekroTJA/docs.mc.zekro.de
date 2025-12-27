@@ -8,6 +8,10 @@ title = "mc.zekro.de Docs"
 command = "mdbook-last-changed"
 renderer = ["html"]
 
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
 [output.html]
 git-repository-url = "https://github.com/zekroTJA/docs.mc.zekro.de"
 additional-css = ["css/last-changed.css"]
+additional-js = ["js/mermaid.min.js", "js/mermaid-init.js"]

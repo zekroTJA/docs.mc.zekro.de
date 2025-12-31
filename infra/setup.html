@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Discord Bot - mc.zekro.de Docs</title>
+        <title>Setup - mc.zekro.de Docs</title>
 
 
         <!-- Custom HTML head -->
@@ -12,34 +12,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="favicon-8114d1fc.png">
-        <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
-        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="css/last-changed-5592aa4e.css">
+        <link rel="stylesheet" href="../css/last-changed-5592aa4e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "";
+            const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-9d75f2d0.js";
+            window.path_to_searchindex_js = "../searchindex-9d75f2d0.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-c79f2f27.js"></script>
+        <script src="../toc-c79f2f27.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -106,7 +106,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -141,7 +141,7 @@
                     <h1 class="menu-title">mc.zekro.de Docs</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
                         <a href="https://github.com/zekroTJA/docs.mc.zekro.de" title="Git repository" aria-label="Git repository">
@@ -178,131 +178,220 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="discord-bot"><a class="header" href="#discord-bot">Discord Bot</a></h1>
-<p>Plotty ist ein <a href="https://github.com/zekroTJA/plotty">selbstgeschriebener Discord-Bot</a>, welcher genutzt werden kann um sich direkt über Discord auf dem Server zu Whitelisten oder um sich ein Grundstück via WorldGuard zu registrieren und zu managen.</p>
-<p><img src="/assets/plotty-discord-profile.png" alt=""></p>
-<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
-<p>Eine Liste aller Commands des Bots kann über die Command-Palette aufgerufen werden. Tipp dafür einfach <code>/</code> in die Textbox ein und Klick auf das Logo von Plotty auf der linken Seite.</p>
-<p><img src="/assets/plotty-commands.png" alt=""></p>
-<h3 id="bind-minecraft-username"><a class="header" href="#bind-minecraft-username"><code>/bind &lt;minecraft-username&gt;</code></a></h3>
-<p>Verbinde deinen Discord-Account mit deinem Minecraft-Nutzer. Dies setzt dich auch automatisch auf die Whitelist des Servers. Einige Befehle des Bots - wie z.B. die <code>/region</code> Commands - können erst nach dem Verknüpfen des Discord- mit dem Minecraft-Accounts benutzt werden!</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Parameter</th><th>Optional</th><th>Beschreibung</th><th>Beispiel</th></tr>
-</thead>
-<tbody>
-<tr><td><code>minecraft-username</code></td><td>Nein</td><td>Dein Nutzername in Minecraft.</td><td><code>zekroTJA</code></td></tr>
-</tbody>
-</table>
-</div>
-<h3 id="region-create-pos1-x-pos1-z-pos2-x-pos2-z-world"><a class="header" href="#region-create-pos1-x-pos1-z-pos2-x-pos2-z-world"><code>/region create &lt;pos1-x&gt; &lt;pos1-z&gt; &lt;pos2-x&gt; &lt;pos2-z&gt; (&lt;world&gt;)</code></a></h3>
-<blockquote>
-<p>ℹ️ Benötigt Verknüpfung zwischen Discord- und Minecraft-Account (siehe <a href="#bind-minecraft-username"><code>/bind</code></a>).</p>
-</blockquote>
-<p>Erstellt eine geschützte Region innerhalb der angegebenen Koordinaten und in der angegebenen Welt.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Parameter</th><th>Optional</th><th>Beschreibung</th><th>Beispiel</th></tr>
-</thead>
-<tbody>
-<tr><td><code>pos1-x</code></td><td>Nein</td><td>X-Koordinate der oberen, linken Ecke des Grundstücks.</td><td><code>420</code></td></tr>
-<tr><td><code>pos1-z</code></td><td>Nein</td><td>Z-Koordinate der oberen, linken Ecke des Grundstücks.</td><td><code>69</code></td></tr>
-<tr><td><code>pos2-x</code></td><td>Nein</td><td>X-Koordinate der unteren, rechten Ecke des Grundstücks.</td><td><code>520</code></td></tr>
-<tr><td><code>pos2-z</code></td><td>Nein</td><td>Z-Koordinate der unteren, rechten Ecke des Grundstücks.</td><td><code>169</code></td></tr>
-<tr><td><code>world</code></td><td>Ja<br />(default: <code>world</code>)</td><td>Welt, in der das Grundstück erstellt werden soll. Werte können sein <code>world</code>, <code>nether</code> oder <code>the_end</code>.</td><td><code>nether</code></td></tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<p>💡 <strong>Tipp</strong>: Du kannst die <a href="https://mc.zekro.de">online Map</a> des Servers nutzen, um die Koordinaten deines Grundstücks zu bestimmen.</p>
-<p><img src="/assets/position-guide.png" alt=""></p>
-</blockquote>
-<h3 id="region-list"><a class="header" href="#region-list"><code>/region list</code></a></h3>
-<blockquote>
-<p>ℹ️ Benötigt Verknüpfung zwischen Discord- und Minecraft-Account (siehe <a href="#bind-minecraft-username"><code>/bind</code></a>).</p>
-</blockquote>
-<p>Listet alle deiner Grundstücke auf.</p>
-<h3 id="region-redefine-plotname-pos1-x-pos1-z-pos2-x-pos2-z-world"><a class="header" href="#region-redefine-plotname-pos1-x-pos1-z-pos2-x-pos2-z-world"><code>/region redefine &lt;plotname&gt; &lt;pos1-x&gt; &lt;pos1-z&gt; &lt;pos2-x&gt; &lt;pos2-z&gt; (&lt;world&gt;)</code></a></h3>
-<blockquote>
-<p>ℹ️ Benötigt Verknüpfung zwischen Discord- und Minecraft-Account (siehe <a href="#bind-minecraft-username"><code>/bind</code></a>).</p>
-</blockquote>
-<p>Ändert die Position und Größe eines bereits bestehenden Grundstücks.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Parameter</th><th>Optional</th><th>Beschreibung</th><th>Beispiel</th></tr>
-</thead>
-<tbody>
-<tr><td><code>plotname</code></td><td>Nein</td><td>Name des zu ändernden Grundstücks.</td><td><code>zekrotja_plot_1</code></td></tr>
-<tr><td><code>pos1-x</code></td><td>Nein</td><td>X-Koordinate der oberen, linken Ecke des Grundstücks.</td><td><code>420</code></td></tr>
-<tr><td><code>pos1-z</code></td><td>Nein</td><td>Z-Koordinate der oberen, linken Ecke des Grundstücks.</td><td><code>69</code></td></tr>
-<tr><td><code>pos2-x</code></td><td>Nein</td><td>X-Koordinate der unteren, rechten Ecke des Grundstücks.</td><td><code>520</code></td></tr>
-<tr><td><code>pos2-z</code></td><td>Nein</td><td>Z-Koordinate der unteren, rechten Ecke des Grundstücks.</td><td><code>169</code></td></tr>
-<tr><td><code>world</code></td><td>Ja<br />(default: <code>world</code>)</td><td>Welt, in der das Grundstück erstellt werden soll. Werte können sein <code>world</code>, <code>nether</code> oder <code>the_end</code>.</td><td><code>nether</code></td></tr>
-</tbody>
-</table>
-</div>
-<h3 id="region-member-add-plotname-username"><a class="header" href="#region-member-add-plotname-username"><code>/region member add &lt;plotname&gt; &lt;username&gt;</code></a></h3>
-<blockquote>
-<p>ℹ️ Benötigt Verknüpfung zwischen Discord- und Minecraft-Account (siehe <a href="#bind-minecraft-username"><code>/bind</code></a>).</p>
-</blockquote>
-<p>Fügt einen Member zu deinem Grundstück hinzu.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Parameter</th><th>Optional</th><th>Beschreibung</th><th>Beispiel</th></tr>
-</thead>
-<tbody>
-<tr><td><code>plotname</code></td><td>Nein</td><td>Der name des zu löschenden Plots.</td><td><code>zekrotja_plot_1</code></td></tr>
-<tr><td><code>username</code></td><td>Nein</td><td>Minecraft-Username des Spielers, den du als Member zu deinem Grundstück hinzufügen möchtest.</td><td><code>luxtracon</code></td></tr>
-</tbody>
-</table>
-</div>
-<h3 id="region-member-remove-plotname-username"><a class="header" href="#region-member-remove-plotname-username"><code>/region member remove &lt;plotname&gt; &lt;username&gt;</code></a></h3>
-<blockquote>
-<p>ℹ️ Benötigt Verknüpfung zwischen Discord- und Minecraft-Account (siehe <a href="#bind-minecraft-username"><code>/bind</code></a>).</p>
-</blockquote>
-<p>Entfernt einen Member von deinem Grundstück.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Parameter</th><th>Optional</th><th>Beschreibung</th><th>Beispiel</th></tr>
-</thead>
-<tbody>
-<tr><td><code>plotname</code></td><td>Nein</td><td>Der name des zu löschenden Plots.</td><td><code>zekrotja_plot_1</code></td></tr>
-<tr><td><code>username</code></td><td>Nein</td><td>Minecraft-Username des Spielers, den du als Member von deinem Grundstück entfernen möchtest.</td><td><code>luxtracon</code></td></tr>
-</tbody>
-</table>
-</div>
-<h3 id="region-delete-plotname"><a class="header" href="#region-delete-plotname"><code>/region delete &lt;plotname&gt;</code></a></h3>
-<blockquote>
-<p>ℹ️ Benötigt Verknüpfung zwischen Discord- und Minecraft-Account (siehe <a href="#bind-minecraft-username"><code>/bind</code></a>).</p>
-</blockquote>
-<p>Löscht eine deiner Regionen, welche mit dem Namen der Region angegeben wird.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Parameter</th><th>Optional</th><th>Beschreibung</th><th>Beispiel</th></tr>
-</thead>
-<tbody>
-<tr><td><code>plotname</code></td><td>Nein</td><td>Der name des zu löschenden Plots.</td><td><code>zekrotja_plot_1</code></td></tr>
-</tbody>
-</table>
-</div>
+                        <h1 id="setup"><a class="header" href="#setup">Setup</a></h1>
+<p>The minecraft server as well as other sattelite services like Prometheus and Grafana are set up using <a href="https://www.docker.com/">Docker</a> and <a href="https://docs.docker.com/compose/">Docker Compose</a>.</p>
+<h2 id="docker-image"><a class="header" href="#docker-image">Docker Image</a></h2>
+<p>The Docker image for the Minecraft server consists of a JDK environment and several utilities inside the image. It is based on the <a href="https://github.com/zekroTJA/minebase">minebase</a> image. This image is a framework foundation to build specific Minecraft servers on top of it. It contains tools like</p>
+<ul>
+<li><a href="https://github.com/zekroTJA/rconcli">rconcli</a> to access the server console directly from inside the container via RCON,
+<ul>
+<li><a href="https://github.com/evolvedpacks/healthcheck">healthcheck</a> to be able monitor the service health of the Minecraft server via Docker,</li>
+</ul>
+</li>
+<li>a full backup system for your worlds based on <a href="https://rclone.org/">rcon</a>,</li>
+<li>as well as a framework of scripts to manage lifetime routines and startup of the server</li>
+</ul>
+<p>For the Minecraft server, we are using <a href="https://papermc.io/">PaperMC</a>. <a href="https://github.com/zekroTJA/papermc-docker">Here</a> you can find the repository of the PaperMC Docker image.</p>
+<h2 id="docker-compose-stack"><a class="header" href="#docker-compose-stack">Docker Compose Stack</a></h2>
+<p>To orchestrate the Minecraft server and related services, we are using <a href="https://docs.docker.com/compose/">Docker Compose</a>, which allows defining configurations for Docker containers, volumes and networks with a single or multiple YAML files.</p>
+<p>The stack comprises the following services:</p>
+<ul>
+<li>the main PaperMC Minecraft server</li>
+<li>a second “staging” instance of PaperMC used to test plugin compatibility for new versions</li>
+<li>Prometheus as backend and database for monitoring</li>
+<li>Grafana as frontend for monitoring</li>
+<li>Portainer to have an easy web interface to manage and interact with containers on the server</li>
+<li>Caddy which serves a fallback website to <a href="https://mc.zekro.de">mc.zekro.de</a> when the server is down for restart or maintenance</li>
+</ul>
+<p>Below, you can see the Docker Compose definition for the stack. This can be outdated though, <a href="https://git.zekro.de/zekro/minecraft-server-configs/src/branch/main/docker-compose.yml">here</a> you can find the file from the repository which is synced with the server, so it will be up to date.</p>
+<p>As you can see, I am using <a href="https://doc.traefik.io/traefik/">traefik proxy</a> as HTTP proxy, which is managed in another Docker Compose stack. Thats why the external <code>core_public</code> network is used to make the web services in this stack available to the internet.</p>
+<pre><code class="language-yaml">networks:
+  core_public:
+    external: true
+  minecraft:
+
+volumes:
+  mysql-data:
+
+secrets:
+  minecraftrclone:
+    file: rclone.conf
+  netrc:
+    file: .netrc
+
+services:
+  spigot:
+    image: "ghcr.io/zekrotja/papermc-docker:zulu-23"
+    restart: unless-stopped
+    environment:
+      VERSION: "1.21.10"
+      BUILD: "latest"
+      CACHE_DOWNLOAD: "true"
+      XMS: 4G
+      XMX: 8G
+      MAX_AGE_BACKUP_FILES: 12d
+      PRE_START_BACKUP: "true"
+      POST_START_BACKUP: "false"
+      BACKUP_SUCCESS_SCRIPT: 'curl -X PUT --netrc-file /run/secrets/.netrc -H "Title: ✅ Minecraft Backup Successfull" "https://ntfy.zekro.de/minecraft_backups"'
+      BACKUP_FAILED_SCRIPT: 'curl -X PUT --netrc-file /run/secrets/.netrc -H "Title: ❌ Minecraft Backup Failed" -d "$$MESSAGE" "https://ntfy.zekro.de/minecraft_backups"'
+      DEBUG_MODE: "true"
+    ports:
+      - "24693:25565"
+      - "25575:25575" # rcon
+      - "24454:24454/udp" # voice chat
+    networks:
+      - "core_public"
+      - "minecraft"
+    volumes:
+      - "./spigot/config:/etc/mcserver/config"
+      - "./spigot/plugins:/etc/mcserver/plugins"
+      - "./spigot/worlds:/etc/mcserver/worlds"
+      - "./spigot/locals:/etc/mcserver/locals"
+    secrets:
+      - source: minecraftrclone
+        target: rcloneconfig
+      - source: netrc
+        target: .netrc
+    healthcheck:
+      test: &gt;
+        /usr/bin/healthcheck -addr localhost:25565 -validateResponse
+        &amp;&amp; test "$(curl -o /dev/null -sLw "%{response_code}\n" http://127.0.0.1:8100)" -eq 200
+      start_period: 1m
+      start_interval: 5s
+      interval: 30s
+      timeout: 10s
+      retries: "10"
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.spigot.entrypoints: "https"
+      traefik.http.routers.spigot.tls: "true"
+      traefik.http.routers.spigot.tls.certresolver: "le"
+      traefik.http.routers.spigot.rule: "Host(`mc.zekro.de`)"
+      traefik.http.routers.spigot.priority: "100"
+      traefik.http.services.spigot.loadbalancer.server.port: "8100"
+
+  caddy:
+    image: "caddy:latest"
+    restart: unless-stopped
+    volumes:
+      - "./caddy/www:/usr/share/caddy"
+    networks:
+      - "core_public"
+      - "minecraft"
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+      traefik.enable: "true"
+      traefik.http.routers.caddy.entrypoints: "https"
+      traefik.http.routers.caddy.tls: "true"
+      traefik.http.routers.caddy.tls.certresolver: "le"
+      traefik.http.routers.caddy.rule: "Host(`mc.zekro.de`)"
+      traefik.http.routers.caddy.priority: "10"
+
+  spigot_staging:
+    image: "ghcr.io/zekrotja/papermc-docker:zulu-23"
+    restart: unless-stopped
+    environment:
+      VERSION: "1.21.11"
+      BUILD: "latest"
+      CACHE_DOWNLOAD: "true"
+      DEBUG_MODE: "true"
+      XMS: 2G
+      XMX: 4G
+      MAX_AGE_BACKUP_FILES: 90d
+      BACKUP_SUCCESS_SCRIPT: 'curl -X PUT --netrc-file /run/secrets/.netrc -H "Title: ✅ STAGING Minecraft Backup Successfull" "https://ntfy.zekro.de/minecraft_backups"'
+      BACKUP_FAILED_SCRIPT: 'curl -X PUT --netrc-file /run/secrets/.netrc -H "Title: ❌ STAGING Minecraft Backup Failed" -d "$$MESSAGE" "https://ntfy.zekro.de/minecraft_backups"'
+    ports:
+      - "24694:25565"
+    networks:
+      - "core_public"
+      - "minecraft"
+    volumes:
+      - "./spigot_staging/config:/etc/mcserver/config"
+      - "./spigot_staging/plugins:/etc/mcserver/plugins"
+      - "./spigot_staging/worlds:/etc/mcserver/worlds"
+      - "./spigot_staging/locals:/etc/mcserver/locals"
+    secrets:
+      - source: minecraftrclone
+        target: rcloneconfig
+      - source: netrc
+        target: .netrc
+    healthcheck:
+      test: &gt;
+        /usr/bin/healthcheck -addr localhost:25565 -validateResponse
+        &amp;&amp; test "$(curl -o /dev/null -sLw "%{response_code}\n" http://127.0.0.1:8100)" -eq 200
+      start_period: 1m
+      start_interval: 5s
+      interval: 30s
+      timeout: 10s
+      retries: "10"
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+      traefik.enable: "true"
+      traefik.http.routers.spigot_staging.entrypoints: "https"
+      traefik.http.routers.spigot_staging.tls: "true"
+      traefik.http.routers.spigot_staging.tls.certresolver: "le"
+      traefik.http.routers.spigot_staging.rule: "Host(`staging.mc.zekro.de`)"
+      traefik.http.routers.spigot_staging.priority: "100"
+      traefik.http.services.spigot_staging.loadbalancer.server.port: "8100"
+
+  prometheus:
+    image: "prom/prometheus:latest"
+    command: "--web.enable-admin-api --config.file=/etc/prometheus/prometheus.yml"
+    expose:
+      - "9090"
+    volumes:
+      - "./prometheus/config:/etc/prometheus"
+    restart: always
+    networks:
+      - "minecraft"
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+
+  portainer:
+    image: "portainer/portainer-ce:latest"
+    volumes:
+      - "./portainer:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    restart: always
+    networks:
+      - "core_public"
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+      traefik.enable: "true"
+      traefik.http.routers.portainer.entrypoints: "https"
+      traefik.http.routers.portainer.tls: "true"
+      traefik.http.routers.portainer.tls.certresolver: "le"
+      traefik.http.routers.portainer.rule: "Host(`docker.mc.zekro.de`)"
+      traefik.http.services.portainer.loadbalancer.server.port: "9000"
+
+  grafana:
+    image: "grafana/grafana"
+    restart: unless-stopped
+    user: "root"
+    environment:
+      GF_SECURITY_ALLOW_EMBEDDING: "true"
+    volumes:
+      - "./grafana:/var/lib/grafana"
+    networks:
+      - "core_public"
+      - "minecraft"
+    labels:
+      com.centurylinklabs.watchtower.enable: "true"
+      traefik.enable: "true"
+      traefik.http.routers.grafana.entrypoints: "https"
+      traefik.http.routers.grafana.tls.certresolver: "le"
+      traefik.http.routers.grafana.tls: "true"
+      traefik.http.routers.grafana.rule: "Host(`grafana.mc.zekro.de`)"
+</code></pre>
 <footer id="last-change">Last change: <time datetime="2025-12-31">2025-12-31</time>, commit: <a href="https://github.com/zekroTJA/docs.mc.zekro.de/commit/dab7fd0">dab7fd0</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="staff.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../infra/server.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="plugins/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -310,13 +399,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="staff.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../infra/server.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="plugins/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>
@@ -334,17 +420,17 @@
         </script>
 
 
-        <script src="elasticlunr-ef4e11c1.min.js"></script>
-        <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="clipboard-1626706a.min.js"></script>
-        <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="js/mermaid-eefea253.min.js"></script>
-        <script src="js/mermaid-init-ccf746f1.js"></script>
+        <script src="../js/mermaid-eefea253.min.js"></script>
+        <script src="../js/mermaid-init-ccf746f1.js"></script>
 
 
 

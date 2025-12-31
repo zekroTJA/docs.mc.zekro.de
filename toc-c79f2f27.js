@@ -8,7 +8,7 @@ class MDBookSidebarScrollbox extends HTMLElement {
         super();
     }
     connectedCallback() {
-        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="willkommen.html"><strong aria-hidden="true">1.</strong> Willkommen</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="regeln.html"><strong aria-hidden="true">2.</strong> Regeln</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="staff.html"><strong aria-hidden="true">3.</strong> Staff</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plotty.html"><strong aria-hidden="true">4.</strong> Discord Bot</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/index.html"><strong aria-hidden="true">5.</strong> Plugins</a></span><ol class="section"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/pl3xmap.html"><strong aria-hidden="true">5.1.</strong> Pl3xMap</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/worldguard.html"><strong aria-hidden="true">5.2.</strong> WorldGuard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/imageframe.html"><strong aria-hidden="true">5.3.</strong> ImageFrame</a></span></li></ol><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="infra/index.html"><strong aria-hidden="true">6.</strong> Infrastruktur</a></span><ol class="section"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="infra/server.html"><strong aria-hidden="true">6.1.</strong> Server</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><span><strong aria-hidden="true">6.2.</strong> Setup</span></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><span><strong aria-hidden="true">6.3.</strong> Backups</span></span></li></ol></li></ol>';
+        this.innerHTML = '<ol class="chapter"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="willkommen.html"><strong aria-hidden="true">1.</strong> Willkommen</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="regeln.html"><strong aria-hidden="true">2.</strong> Regeln</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="staff.html"><strong aria-hidden="true">3.</strong> Staff</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plotty.html"><strong aria-hidden="true">4.</strong> Discord Bot</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/index.html"><strong aria-hidden="true">5.</strong> Plugins</a></span><ol class="section"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/pl3xmap.html"><strong aria-hidden="true">5.1.</strong> Pl3xMap</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/worldguard.html"><strong aria-hidden="true">5.2.</strong> WorldGuard</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="plugins/imageframe.html"><strong aria-hidden="true">5.3.</strong> ImageFrame</a></span></li></ol><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="infra/index.html"><strong aria-hidden="true">6.</strong> Infrastruktur</a></span><ol class="section"><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="infra/server.html"><strong aria-hidden="true">6.1.</strong> Server</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><a href="infra/setup.html"><strong aria-hidden="true">6.2.</strong> Setup</a></span></li><li class="chapter-item expanded "><span class="chapter-link-wrapper"><span><strong aria-hidden="true">6.3.</strong> Backups</span></span></li></ol></li></ol>';
         // Set the current, active page, and reveal it if it's hidden
         let current_page = document.location.href.toString().split('#')[0].split('?')[0];
         if (current_page.endsWith('/')) {
@@ -40,14 +40,22 @@ class MDBookSidebarScrollbox extends HTMLElement {
         // Track and set sidebar scroll position
         this.addEventListener('click', e => {
             if (e.target.tagName === 'A') {
-                sessionStorage.setItem('sidebar-scroll', this.scrollTop);
+                const clientRect = e.target.getBoundingClientRect();
+                const sidebarRect = this.getBoundingClientRect();
+                sessionStorage.setItem('sidebar-scroll-offset', clientRect.top - sidebarRect.top);
             }
         }, { passive: true });
-        const sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-        sessionStorage.removeItem('sidebar-scroll');
-        if (sidebarScrollTop) {
+        const sidebarScrollOffset = sessionStorage.getItem('sidebar-scroll-offset');
+        sessionStorage.removeItem('sidebar-scroll-offset');
+        if (sidebarScrollOffset !== null) {
             // preserve sidebar scroll position when navigating via links within sidebar
-            this.scrollTop = sidebarScrollTop;
+            const activeSection = this.querySelector('.active');
+            if (activeSection) {
+                const clientRect = activeSection.getBoundingClientRect();
+                const sidebarRect = this.getBoundingClientRect();
+                const currentOffset = clientRect.top - sidebarRect.top;
+                this.scrollTop += currentOffset - parseFloat(sidebarScrollOffset);
+            }
         } else {
             // scroll sidebar to current active section when navigating via
             // 'next/previous chapter' buttons

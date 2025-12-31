@@ -10,5 +10,5 @@
   - [ImageFrame](./plugins/imageframe.md)
 - [Infrastruktur](./infra/index.md)
   - [Server](./infra/server.md)
-  - [Setup]()
+  - [Setup](./infra/setup.md)
   - [Backups]()
